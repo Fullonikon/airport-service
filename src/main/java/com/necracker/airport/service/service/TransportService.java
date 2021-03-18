@@ -19,4 +19,8 @@ public class TransportService {
         return this.transportRepository.findAll();
     }
 
+    public Transport saveTransport(Transport transport) {
+        return this.transportRepository.save(transport);
+    }
+
 }

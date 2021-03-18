@@ -16,7 +16,7 @@ public class Transport {
     @Id private long tailNumber;
 
     @OneToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "hangarid", referencedColumnName = "hangarid")
+    @JoinColumn(name = "hangarId", referencedColumnName = "hangarId")
     private Hangar hangar;
 
     @OneToOne(mappedBy = "transport")
@@ -73,21 +73,25 @@ public class Transport {
         this.hangar = hangar;
     }
 
+    public int getSpaceLeft() {
+        return spaceLeft;
+    }
+
+    public void setSpaceLeft(int spaceLeft) {
+        this.spaceLeft = spaceLeft;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Transport transport = (Transport) o;
-        return capacity == transport.capacity &&
-                flightRange == transport.flightRange &&
-                tailNumber == transport.tailNumber &&
-                Objects.equals(type, transport.type) &&
-                Objects.equals(model, transport.model);
+        return capacity == transport.capacity && spaceLeft == transport.spaceLeft && flightRange == transport.flightRange && tailNumber == transport.tailNumber && type.equals(transport.type) && model.equals(transport.model) && hangar.equals(transport.hangar) && Objects.equals(schedule, transport.schedule);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(type, capacity, flightRange, model, tailNumber);
+        return Objects.hash(type, capacity, spaceLeft, flightRange, model, tailNumber, hangar, schedule);
     }
 
     @Override
@@ -95,9 +99,11 @@ public class Transport {
         return "Transport{" +
                 "type='" + type + '\'' +
                 ", capacity=" + capacity +
+                ", spaceLeft=" + spaceLeft +
                 ", flightRange=" + flightRange +
                 ", model='" + model + '\'' +
                 ", tailNumber=" + tailNumber +
+                ", hangar=" + hangar +
                 '}';
     }
 }

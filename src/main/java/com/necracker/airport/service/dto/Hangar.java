@@ -9,7 +9,7 @@ import java.util.Objects;
 @Entity
 @Table(name = "hangar")
 public class Hangar {
-    @Id int hangarID;
+    @Id int hangarId;
     int capacity;
     String color;
     String type;
@@ -20,12 +20,12 @@ public class Hangar {
 
     public Hangar() {}
 
-    public int getHangarID() {
-        return hangarID;
+    public int getHangarId() {
+        return hangarId;
     }
 
-    public void setHangarID(int hangarID) {
-        this.hangarID = hangarID;
+    public void setHangarId(int hangarID) {
+        this.hangarId = hangarID;
     }
 
     public int getCapacity() {
@@ -57,7 +57,7 @@ public class Hangar {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Hangar hangar = (Hangar) o;
-        return hangarID == hangar.hangarID &&
+        return hangarId == hangar.hangarId &&
                 capacity == hangar.capacity &&
                 Objects.equals(color, hangar.color) &&
                 Objects.equals(type, hangar.type);
@@ -65,13 +65,13 @@ public class Hangar {
 
     @Override
     public int hashCode() {
-        return Objects.hash(hangarID, capacity, color, type);
+        return Objects.hash(hangarId, capacity, color, type);
     }
 
     @Override
     public String toString() {
         return "Hangar{" +
-                "hangarID=" + hangarID +
+                "hangarID=" + hangarId +
                 ", capacity=" + capacity +
                 ", color='" + color + '\'' +
                 ", type='" + type + '\'' +

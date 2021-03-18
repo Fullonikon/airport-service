@@ -9,10 +9,10 @@ import java.util.Objects;
 @Entity
 @Table(name = "pilot")
 public class Pilot {
-    @Id long employeeId;
-    String firstName;
-    String lastName;
-    String category;
+    @Id private long employeeId;
+    private String firstName;
+    private String lastName;
+    private String category;
 
     @OneToOne(mappedBy = "pilot")
     private Schedule schedule;
