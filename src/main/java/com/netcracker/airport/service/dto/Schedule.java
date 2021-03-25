@@ -1,4 +1,4 @@
-package com.necracker.airport.service.dto;
+package com.netcracker.airport.service.dto;
 
 import javax.persistence.*;
 import java.time.LocalDate;

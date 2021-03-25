@@ -1,7 +1,7 @@
-package com.necracker.airport.service.repository;
+package com.netcracker.airport.service.repository;
 
 
-import com.necracker.airport.service.dto.Hangar;
+import com.netcracker.airport.service.dto.Hangar;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

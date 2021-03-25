@@ -1,6 +1,6 @@
-package com.necracker.airport.service.repository;
+package com.netcracker.airport.service.repository;
 
-import com.necracker.airport.service.dto.Schedule;
+import com.netcracker.airport.service.dto.Schedule;
 import org.springframework.data.repository.CrudRepository;
 
 public interface ScheduleRepository extends CrudRepository<Schedule, Long> {

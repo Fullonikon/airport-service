@@ -1,11 +1,11 @@
-package com.necracker.airport.service.controller;
+package com.netcracker.airport.service.controller;
 
-import com.necracker.airport.service.dto.Hangar;
-import com.necracker.airport.service.dto.Transport;
-import com.necracker.airport.service.service.HangarService;
-import com.necracker.airport.service.service.TransportService;
-import com.necracker.airport.service.dto.Pilot;
-import com.necracker.airport.service.service.PilotService;
+import com.netcracker.airport.service.dto.Hangar;
+import com.netcracker.airport.service.dto.Transport;
+import com.netcracker.airport.service.service.HangarService;
+import com.netcracker.airport.service.service.TransportService;
+import com.netcracker.airport.service.dto.Pilot;
+import com.netcracker.airport.service.service.PilotService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -24,7 +24,7 @@ public class MainController {
         this.hangarService = hangarService;
     }
 
-    @GetMapping("/findAll")
+    @GetMapping("/findAllTransport")
     @CrossOrigin(origins = "http://localhost:4200")
     public Iterable<Transport> findAll() {
         return this.transportService.findAll();

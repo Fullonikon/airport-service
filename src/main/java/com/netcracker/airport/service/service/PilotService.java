@@ -1,7 +1,7 @@
-package com.necracker.airport.service.service;
+package com.netcracker.airport.service.service;
 
-import com.necracker.airport.service.dto.Pilot;
-import com.necracker.airport.service.repository.PilotRepository;
+import com.netcracker.airport.service.dto.Pilot;
+import com.netcracker.airport.service.repository.PilotRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
